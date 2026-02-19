@@ -12,7 +12,7 @@ export default function About() {
         <div className="text-center md:text-left">
           <h2 className="text-2xl font-bold mb-4 text-white">About Me</h2>
           <p className="text-gray-300 leading-relaxed text-lg">
-            I am <span className="text-white font-semibold">Raffasha Ariadiza</span>, Right Now i am a student in Digitech University for the degree, But im intrigue too learning web-development and ui/ux thats why i keep learning. 
+            My Name is <span className="text-white font-semibold">Raffasha Ariadiza</span>, Right Now i am a student in Digitech University for the degree, But im intrigue too learning web-development and ui/ux thats why i keep learning. 
           </p>
         </div>
       </div>
