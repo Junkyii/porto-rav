@@ -11,7 +11,8 @@ export default {
         'card-bg': '#121212',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Outfit', 'sans-serif'],
+        mono: ['Space Grotesk', 'monospace'],
       },
     },
   },
