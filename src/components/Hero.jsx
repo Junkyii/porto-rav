@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="max-w-3xl mx-auto space-y-8 animate-fade-in-up">
           <div>
             <h2 className="text-white font-medium tracking-wider mb-4">
-              HELLO, I'M
+              
             </h2>
             <h1 className="text-5xl md:text-8xl font-bold tracking-tight leading-tight">
               Raffasha <br />
