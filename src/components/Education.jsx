@@ -36,7 +36,7 @@ export default function Education() {
             {/* Timeline Dot */}
             <div className="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-deep-black border border-white group-hover:bg-white transition-colors duration-300" />
             
-            <div className="group bg-white/5 p-6 rounded-xl border border-white/5 hover:border-white/20 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1 transition-all duration-300">
+            <div className="group bg-white/5 p-5 md:p-6 rounded-xl border border-white/5 hover:border-white/20 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1 transition-all duration-300">
               <div className="flex flex-col sm:flex-row justify-between sm:items-center mb-4">
                  <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-white/5 rounded-lg p-2 flex items-center justify-center border border-white/10 group-hover:border-white/30 transition-colors">

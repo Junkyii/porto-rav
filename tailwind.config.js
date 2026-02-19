@@ -12,6 +12,7 @@ export default {
       },
       fontFamily: {
         sans: ['Outfit', 'sans-serif'],
+        serif: ['"Playfair Display"', 'serif'],
         mono: ['Space Grotesk', 'monospace'],
       },
     },

@@ -61,7 +61,7 @@ export default function Skills() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {skills.map((skillGroup, index) => (
-            <div key={index} className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1 transition-all duration-300">
+            <div key={index} className="bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1 transition-all duration-300">
               <h3 className="text-xl font-bold mb-6 text-white text-center border-b border-white/10 pb-4">{skillGroup.category}</h3>
               <div className="flex flex-wrap justify-center gap-6">
                 {skillGroup.items.map((item, idx) => (

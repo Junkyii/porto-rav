@@ -38,7 +38,7 @@ export default function Projects() {
           {repos.map((repo) => (
             <div key={repo.id} className="group relative h-full">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur-xl"></div>
-              <div className="relative h-full bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-white/20 hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 flex flex-col">
+              <div className="relative h-full bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10 hover:border-white/20 hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 flex flex-col">
                 <div className="flex justify-between items-start mb-6">
                   <div className="p-3 bg-white/5 rounded-xl border border-white/5 group-hover:bg-blue-500/20 group-hover:border-blue-500/30 transition-colors duration-300">
                     <Folder size={24} className="group-hover:text-blue-400 transition-colors" />

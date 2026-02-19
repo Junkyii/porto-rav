@@ -28,7 +28,7 @@ export default function Experience() {
           {experiences.map((exp, index) => (
             <div key={index} className="group relative">
                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur-xl"></div>
-               <div className="relative bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-white/20 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1 transition-all duration-300">
+               <div className="relative bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10 hover:border-white/20 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1 transition-all duration-300">
                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
                    <div>
                      <h3 className="text-xl font-bold text-white mb-1 group-hover:text-blue-400 transition-colors">{exp.role}</h3>

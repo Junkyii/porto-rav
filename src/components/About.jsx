@@ -4,7 +4,7 @@ import FadeIn from './FadeIn';
 export default function About() {
   return (
     <FadeIn>
-      <div className="group relative bg-white/5 p-8 md:p-12 rounded-3xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:shadow-[0_0_50px_-12px_rgba(255,255,255,0.1)] overflow-hidden">
+      <div className="group relative bg-white/5 p-6 md:p-12 rounded-3xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:shadow-[0_0_50px_-12px_rgba(255,255,255,0.1)] overflow-hidden">
         
         {/* Animated Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
