@@ -27,15 +27,15 @@ export default function Experience() {
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <div key={index} className="group relative">
-               <div className="absolute -inset-0.5 bg-gradient-to-r from-white/10 to-gray-800/50 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur-sm"></div>
-               <div className="relative bg-card-bg p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all">
+               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur-xl"></div>
+               <div className="relative bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-white/20 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1 transition-all duration-300">
                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
                    <div>
-                     <h3 className="text-xl font-bold text-white mb-1">{exp.role}</h3>
+                     <h3 className="text-xl font-bold text-white mb-1 group-hover:text-blue-400 transition-colors">{exp.role}</h3>
                      <span className="text-lg text-gray-300 font-medium">{exp.company}</span>
                    </div>
                    <div className="flex flex-col items-start md:items-end">
-                     <span className="text-sm font-mono text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/5">{exp.period}</span>
+                     <span className="text-sm font-mono text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/5 group-hover:border-white/20 transition-colors">{exp.period}</span>
                      <span className="text-xs text-gray-500 mt-1">{exp.location}</span>
                    </div>
                  </div>
@@ -46,7 +46,7 @@ export default function Experience() {
 
                  <div className="flex flex-wrap gap-2">
                    {exp.tags.map((tag, i) => (
-                     <span key={i} className="text-xs font-medium text-white bg-white/10 px-3 py-1.5 rounded-full border border-white/5">
+                     <span key={i} className="text-xs font-medium text-white bg-white/10 px-3 py-1.5 rounded-full border border-white/5 group-hover:bg-white/20 transition-colors">
                        {tag}
                      </span>
                    ))}

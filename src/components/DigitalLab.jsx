@@ -21,7 +21,7 @@ export default function DigitalLab() {
         VIEW GITHUB REGISTRY <ArrowRight size={16} />
       </a>
 
-      <div className="bg-card-bg rounded-2xl p-6 border border-white/10">
+      <div className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-white/20 hover:shadow-xl hover:shadow-green-500/5 transition-all duration-300 hover:-translate-y-1">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
              <Github className="text-white" size={24} />
