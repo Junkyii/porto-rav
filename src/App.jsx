@@ -26,8 +26,8 @@ function App() {
       </div>
 
       <Experience />
-      <Skills />
       <Projects />
+      <Skills />
       <Contact />
     </div>
   )
