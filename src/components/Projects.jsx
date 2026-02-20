@@ -66,17 +66,17 @@ export default function Projects() {
     <section id="projects" className="py-20 bg-deep-black text-white">
       <RevealOnScroll className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-block p-3 rounded-2xl bg-white/5 mb-6 border border-white/10">
-            <Folder size={32} className="text-white" />
+          <div className="inline-block p-2.5 sm:p-3 rounded-2xl bg-white/5 mb-4 sm:mb-6 border border-white/10">
+            <Folder size={28} className="text-white sm:w-8 sm:h-8" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured <span className="text-gray-500">Projects</span></h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Featured <span className="text-gray-500">Projects</span></h2>
+          <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">
             A showcase of my work — from personal projects to collaborative builds.
           </p>
         </div>
 
         {/* Featured Projects */}
-        <div className="space-y-8 mb-16">
+        <div className="space-y-6 sm:space-y-8 mb-10 sm:mb-16">
           {featuredProjects.map((project) => (
             <div key={project.id} className="group relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-700 blur-2xl"></div>
@@ -90,7 +90,7 @@ export default function Projects() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-64 lg:h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-700"
+                      className="w-full h-44 sm:h-56 md:h-64 lg:h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/80 hidden lg:block"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:hidden"></div>
@@ -102,21 +102,21 @@ export default function Projects() {
                       </span>
                     </div>
                     {/* Badge */}
-                    <div className="absolute top-4 left-4">
-                      <span className="flex items-center gap-1.5 text-xs font-medium text-white bg-blue-500/80 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                        <Sparkles size={12} />
+                    <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
+                      <span className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs font-medium text-white bg-blue-500/80 backdrop-blur-sm px-2 py-1 sm:px-3 sm:py-1.5 rounded-full">
+                        <Sparkles size={10} className="sm:w-3 sm:h-3" />
                         {project.highlight}
                       </span>
                     </div>
                   </div>
 
                   {/* Content Side */}
-                  <div className="lg:w-2/5 p-6 md:p-8 flex flex-col justify-center">
-                    <div className="flex items-center gap-3 mb-3">
-                      <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                  <div className="lg:w-2/5 p-4 sm:p-6 md:p-8 flex flex-col justify-center">
+                    <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
                         {project.title}
                       </h3>
-                      <span className={`flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0 ${
+                      <span className={`flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-[11px] font-medium px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 sm:translate-y-1 sm:group-hover:translate-y-0 flex-shrink-0 ${
                         project.status === 'live'
                           ? 'text-green-400 bg-green-500/10 border border-green-500/20'
                           : 'text-red-400 bg-red-500/10 border border-red-500/20'
@@ -125,33 +125,33 @@ export default function Projects() {
                         {project.status === 'live' ? 'Live' : 'Closed'}
                       </span>
                     </div>
-                    <p className="text-gray-400 leading-relaxed mb-6 text-sm">
+                    <p className="text-gray-400 leading-relaxed mb-4 sm:mb-6 text-xs sm:text-sm">
                       {project.description}
                     </p>
 
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
                       {project.tags.map((tag, i) => (
-                        <span key={i} className="text-xs font-medium text-gray-300 bg-white/5 px-3 py-1.5 rounded-full border border-white/10 group-hover:bg-white/10 transition-colors">
+                        <span key={i} className="text-[10px] sm:text-xs font-medium text-gray-300 bg-white/5 px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border border-white/10 group-hover:bg-white/10 transition-colors">
                           {tag}
                         </span>
                       ))}
                     </div>
 
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2 sm:gap-3">
                       <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm text-gray-300 hover:text-white bg-white/5 hover:bg-white/10 px-4 py-2 rounded-xl border border-white/10 hover:border-white/20 transition-all"
+                        className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-300 hover:text-white bg-white/5 hover:bg-white/10 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl border border-white/10 hover:border-white/20 transition-all"
                       >
-                        <Github size={16} />
+                        <Github size={14} className="sm:w-4 sm:h-4" />
                         Source
                       </a>
                       <button
                         onClick={() => setSelectedFeatured(project)}
-                        className="flex items-center gap-2 text-sm text-white bg-blue-500/20 hover:bg-blue-500/30 px-4 py-2 rounded-xl border border-blue-500/30 hover:border-blue-500/50 transition-all cursor-pointer"
+                        className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-white bg-blue-500/20 hover:bg-blue-500/30 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl border border-blue-500/30 hover:border-blue-500/50 transition-all cursor-pointer"
                       >
-                        <ExternalLink size={16} />
+                        <ExternalLink size={14} className="sm:w-4 sm:h-4" />
                         Details
                       </button>
                     </div>
@@ -176,7 +176,7 @@ export default function Projects() {
                   layoutId={`project-${repo.id}`}
                   key={repo.id}
                   onClick={() => setSelectedProject(repo)}
-                  className="cursor-pointer group relative h-full bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10 hover:border-white/20 hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 flex flex-col"
+                  className="cursor-pointer group relative h-full bg-white/5 p-4 sm:p-6 md:p-8 rounded-2xl border border-white/10 hover:border-white/20 hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 flex flex-col"
                 >
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur-xl"></div>
 
@@ -191,7 +191,7 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  <motion.h3 layoutId={`title-${repo.id}`} className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors z-10">{repo.name}</motion.h3>
+                  <motion.h3 layoutId={`title-${repo.id}`} className="text-base sm:text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors z-10">{repo.name}</motion.h3>
 
                   <p className="text-gray-400 text-sm mb-6 flex-grow leading-relaxed line-clamp-3 z-10">
                     {repo.description || "No description available."}
@@ -234,12 +234,12 @@ export default function Projects() {
       {/* Featured Project Modal */}
       {selectedFeatured && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/80 backdrop-blur-sm"
           onClick={() => setSelectedFeatured(null)}
           style={{ animation: 'projFadeIn 0.2s ease-out' }}
         >
           <div
-            className="relative max-w-4xl w-full bg-gradient-to-br from-gray-900 to-black rounded-2xl border border-white/10 shadow-2xl shadow-blue-500/10 overflow-hidden"
+            className="relative max-w-4xl w-full bg-gradient-to-br from-gray-900 to-black rounded-t-2xl sm:rounded-2xl border border-white/10 shadow-2xl shadow-blue-500/10 overflow-hidden max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
             style={{ animation: 'projScaleIn 0.3s ease-out' }}
           >
@@ -251,7 +251,7 @@ export default function Projects() {
             </button>
 
             {/* Modal Image */}
-            <div className="relative w-full h-56 md:h-72 overflow-hidden">
+            <div className="relative w-full h-40 sm:h-56 md:h-72 overflow-hidden">
               <img src={selectedFeatured.image} alt={selectedFeatured.title} className="w-full h-full object-cover object-top" />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
               <div className="absolute bottom-4 left-6">
