@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Github, Star, GitFork, ArrowRight, Folder } from 'lucide-react';
-import FadeIn from './FadeIn';
+import { RevealOnScroll } from './RevealOnScroll';
 
 export default function Projects() {
   const [repos, setRepos] = useState([]);
@@ -23,7 +23,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-20 bg-deep-black text-white">
-      <FadeIn className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <RevealOnScroll className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block p-3 rounded-2xl bg-white/5 mb-6 border border-white/10">
             <Folder size={32} className="text-white" />
@@ -87,7 +87,7 @@ export default function Projects() {
              View all repositories <ArrowRight size={16} />
            </a>
         </div>
-      </FadeIn>
+      </RevealOnScroll>
     </section>
   );
 }

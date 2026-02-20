@@ -1,5 +1,5 @@
 import { Briefcase } from 'lucide-react';
-import FadeIn from './FadeIn';
+import { RevealOnScroll } from './RevealOnScroll';
 
 import socaLogo from '../assets/3.png';
 
@@ -18,7 +18,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="py-20 bg-deep-black">
-      <FadeIn className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <RevealOnScroll className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block p-3 rounded-2xl bg-white/5 mb-6 border border-white/10">
             <Briefcase size={32} className="text-white" />
@@ -63,7 +63,7 @@ export default function Experience() {
             </div>
           ))}
         </div>
-      </FadeIn>
+      </RevealOnScroll>
     </section>
   )
 }

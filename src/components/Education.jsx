@@ -1,5 +1,5 @@
 import { GraduationCap } from 'lucide-react';
-import FadeIn from './FadeIn';
+import { RevealOnScroll } from './RevealOnScroll';
 import smkn4Logo from '../assets/1.png';
 import digitechLogo from '../assets/2.png';
 
@@ -24,7 +24,7 @@ export default function Education() {
   ];
 
   return (
-    <FadeIn delay={200} className="h-full">
+    <RevealOnScroll delay={0.2} className="h-full">
       <div className="mb-8 flex items-center gap-3">
         <GraduationCap className="text-white" size={24} />
         <h2 className="text-xl font-bold text-white tracking-wider">EDUCATION</h2>
@@ -61,6 +61,6 @@ export default function Education() {
           </div>
         ))}
       </div>
-    </FadeIn>
+    </RevealOnScroll>
   )
 }

@@ -1,9 +1,9 @@
 import profileImg from '../assets/jaein.png';
-import FadeIn from './FadeIn';
+import { RevealOnScroll } from './RevealOnScroll';
 
 export default function About() {
   return (
-    <FadeIn>
+    <RevealOnScroll>
       <div className="group relative bg-white/5 p-6 md:p-12 rounded-3xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:shadow-[0_0_50px_-12px_rgba(255,255,255,0.1)] overflow-hidden">
         
         {/* Animated Background Gradient */}
@@ -41,6 +41,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </FadeIn>
+    </RevealOnScroll>
   )
 }

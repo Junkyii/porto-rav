@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { Mail, Github, Linkedin, Send, Loader2, Instagram } from 'lucide-react';
 import emailjs from '@emailjs/browser';
-import FadeIn from './FadeIn';
+import { RevealOnScroll } from './RevealOnScroll';
 
 export default function Contact() {
   const formRef = useRef();
@@ -35,7 +35,7 @@ export default function Contact() {
     <section id="contact" className="py-20 bg-deep-black relative overflow-hidden">
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white/5 to-transparent pointer-events-none" />
 
-      <FadeIn className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <RevealOnScroll className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           <div>
@@ -139,7 +139,7 @@ export default function Contact() {
         <div className="mt-20 pt-8 border-t border-white/5 text-center text-gray-500 text-sm">
           &copy; {new Date().getFullYear()} Raffasha Ariadiza. All rights reserved.
         </div>
-      </FadeIn>
+      </RevealOnScroll>
     </section>
   )
 }
