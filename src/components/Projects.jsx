@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { RevealOnScroll } from './RevealOnScroll';
 
 import portoImg from '../assets/porto.png';
+import porto2Img from '../assets/porto2.png';
+import porto3Img from '../assets/porto3.png';
 
 const featuredProjects = [
   {
@@ -14,7 +16,30 @@ const featuredProjects = [
     tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
     liveUrl: '#',
     githubUrl: 'https://github.com/Junkyii/porto-rav',
-    highlight: 'Featured Project'
+    highlight: 'Featured Project',
+    status: 'live'
+  },
+  {
+    id: 'apple-music-clone',
+    title: 'Apple Music Clone',
+    description: 'A sleek Apple Music-inspired web app featuring a modern UI with album grids, music player interface, and smooth navigation. Built to replicate the premium Apple Music experience.',
+    image: porto2Img,
+    tags: ['React', 'Tailwind CSS'],
+    liveUrl: '#',
+    githubUrl: 'https://github.com/Junkyii/apple-music-clone',
+    highlight: 'Featured Project',
+    status: 'closed'
+  },
+  {
+    id: 'jadwal-coolyeah',
+    title: 'Jadwal Coolyeah',
+    description: 'A schedule management web application with a clean, intuitive interface. Helps users organize and track their schedules efficiently with a straightforward design.',
+    image: porto3Img,
+    tags: ['JavaScript', 'CSS'],
+    liveUrl: '#',
+    githubUrl: 'https://github.com/Junkyii/jadwal-coolyeah',
+    highlight: 'Featured Project',
+    status: 'closed'
   }
 ];
 
@@ -87,9 +112,19 @@ export default function Projects() {
 
                   {/* Content Side */}
                   <div className="lg:w-2/5 p-6 md:p-8 flex flex-col justify-center">
-                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                      {project.title}
-                    </h3>
+                    <div className="flex items-center gap-3 mb-3">
+                      <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                        {project.title}
+                      </h3>
+                      <span className={`flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0 ${
+                        project.status === 'live'
+                          ? 'text-green-400 bg-green-500/10 border border-green-500/20'
+                          : 'text-red-400 bg-red-500/10 border border-red-500/20'
+                      }`}>
+                        <span className={`w-1.5 h-1.5 rounded-full ${project.status === 'live' ? 'bg-green-400 animate-pulse' : 'bg-red-400'}`}></span>
+                        {project.status === 'live' ? 'Live' : 'Closed'}
+                      </span>
+                    </div>
                     <p className="text-gray-400 leading-relaxed mb-6 text-sm">
                       {project.description}
                     </p>
