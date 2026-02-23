@@ -47,7 +47,7 @@ export default function Education() {
                       <div className="text-sm text-gray-400 font-medium">{edu.degree}</div>
                     </div>
                  </div>
-                 <div className="flex flex-col items-end gap-1 mt-2 sm:mt-0">
+                 <div className="flex flex-col items-start sm:items-end gap-1 mt-2 sm:mt-0">
                     <span className="text-xs font-mono text-green-400 bg-green-900/10 px-2 py-0.5 rounded border border-green-900/20">{edu.year}</span>
                     {index === 1 && <span className="text-[10px] font-bold bg-green-900/30 text-green-400 px-2 py-0.5 rounded border border-green-900/50">ACTIVE</span>}
                     {index === 0 && <span className="text-[10px] font-bold bg-white/10 text-gray-400 px-2 py-0.5 rounded border border-white/5">COMPLETED</span>}
