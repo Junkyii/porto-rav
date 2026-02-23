@@ -6,10 +6,13 @@ import Experience from './components/Experience'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import Projects from './components/Projects'
+import CursorGlow from './components/CursorGlow'
+import BackToTop from './components/BackToTop'
 
 function App() {
   return (
     <div className="min-h-screen bg-deep-black text-white font-sans selection:bg-white selection:text-black">
+      <CursorGlow />
       <Navbar />
       <Hero />
       
@@ -29,6 +32,7 @@ function App() {
       <Projects />
       <Skills />
       <Contact />
+      <BackToTop />
     </div>
   )
 }
