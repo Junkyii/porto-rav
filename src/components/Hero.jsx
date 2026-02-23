@@ -1,22 +1,15 @@
 import { ArrowRight, Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import { RevealOnScroll } from './RevealOnScroll';
-import RoleCycler from './RoleCycler';
-import FloatingParticles from './FloatingParticles';
 
 export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
-      
-      <FloatingParticles />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
         <div className="max-w-3xl mx-auto space-y-8">
           <RevealOnScroll>
           <div>
-            <h2 className="text-white font-medium tracking-wider mb-4">
-              
-            </h2>
             <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight leading-tight mb-6 font-serif">
               Raffasha <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Ariadiza</span>
@@ -25,8 +18,12 @@ export default function Hero() {
           </RevealOnScroll>
 
           <RevealOnScroll delay={0.2}>
-          <div className="flex items-center justify-center text-xl md:text-2xl">
-            <RoleCycler />
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 text-lg md:text-xl text-gray-400">
+            <span className="font-medium text-white">Front-end Engineer</span>
+            <span className="hidden md:block w-1 h-1 rounded-full bg-white/30" />
+            <span className="font-medium text-white">UI/UX Designer</span>
+            <span className="hidden md:block w-1 h-1 rounded-full bg-white/30" />
+            <span className="font-medium text-white">QA Engineer</span>
           </div>
           </RevealOnScroll>
 
