@@ -6,7 +6,6 @@ export default function CursorGlow() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only show on non-touch devices
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     if (isTouchDevice) return;
 
@@ -29,14 +28,12 @@ export default function CursorGlow() {
     };
   }, [isVisible]);
 
-  // Don't render on touch devices
   if (typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0)) {
     return null;
   }
 
   return (
     <>
-      {/* Main glow orb */}
       <motion.div
         className="fixed pointer-events-none z-[9999] mix-blend-screen"
         animate={{
@@ -58,7 +55,6 @@ export default function CursorGlow() {
         />
       </motion.div>
 
-      {/* Small dot cursor */}
       <motion.div
         className="fixed pointer-events-none z-[9999]"
         animate={{
