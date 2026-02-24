@@ -6,8 +6,20 @@ import { RevealOnScroll } from './RevealOnScroll';
 import portoImg from '../assets/porto.png';
 import porto2Img from '../assets/porto2.png';
 import porto3Img from '../assets/porto3.png';
+import porto4Img from '../assets/porto4.png';
 
 const featuredProjects = [
+  {
+    id: 'f1-sf26',
+    title: 'Ferrari SF-26 Landing Page',
+    description: 'A premium, high-performance landing page for the 2026 Ferrari Formula 1 era. Features a bold aesthetic, interactive elements, and details about the SF-26 car and its drivers, Charles Leclerc and Lewis Hamilton.',
+    image: porto4Img,
+    tags: ['React', 'Tailwind CSS', 'Framer Motion'],
+    liveUrl: 'https://f1-sf-26.vercel.app/',
+    githubUrl: 'https://github.com/Junkyii/F1-SF26',
+    highlight: 'Featured Project',
+    status: 'live'
+  },
   {
     id: 'portfolio',
     title: 'Personal Portfolio',
