@@ -14,7 +14,7 @@ const featuredProjects = [
     title: 'Ferrari SF-26 Landing Page',
     description: 'A premium, high-performance landing page for the 2026 Ferrari Formula 1 era. Features a bold aesthetic, interactive elements, and details about the SF-26 car and its drivers, Charles Leclerc and Lewis Hamilton.',
     image: porto4Img,
-    tags: ['React', 'Tailwind CSS', 'Framer Motion'],
+    tags: ['Vue', 'Vite', 'CSS'],
     liveUrl: 'https://f1-sf-26.vercel.app/',
     githubUrl: 'https://github.com/Junkyii/F1-SF26',
     highlight: 'Featured Project',
@@ -147,6 +147,17 @@ export default function Projects() {
                     </div>
 
                     <div className="flex items-center gap-2 sm:gap-3">
+                      {project.liveUrl && project.liveUrl !== '#' && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-white bg-blue-500 hover:bg-blue-600 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl transition-all shadow-lg shadow-blue-500/20"
+                        >
+                          <ExternalLink size={14} className="sm:w-4 sm:h-4" />
+                          Live Site
+                        </a>
+                      )}
                       <a
                         href={project.githubUrl}
                         target="_blank"
@@ -158,9 +169,9 @@ export default function Projects() {
                       </a>
                       <button
                         onClick={() => setSelectedFeatured(project)}
-                        className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-white bg-blue-500/20 hover:bg-blue-500/30 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl border border-blue-500/30 hover:border-blue-500/50 transition-all cursor-pointer"
+                        className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-white bg-white/5 hover:bg-white/10 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl border border-white/10 hover:border-white/20 transition-all cursor-pointer"
                       >
-                        <ExternalLink size={14} className="sm:w-4 sm:h-4" />
+                        <Sparkles size={14} className="sm:w-4 sm:h-4" />
                         Details
                       </button>
                     </div>
@@ -285,6 +296,17 @@ export default function Projects() {
               </div>
 
               <div className="flex items-center gap-3 pt-4 border-t border-white/10">
+                {selectedFeatured.liveUrl && selectedFeatured.liveUrl !== '#' && (
+                  <a
+                    href={selectedFeatured.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-white bg-blue-500 hover:bg-blue-600 px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-500/20"
+                  >
+                    <ExternalLink size={16} />
+                    Visit Live Site
+                  </a>
+                )}
                 <a
                   href={selectedFeatured.githubUrl}
                   target="_blank"
