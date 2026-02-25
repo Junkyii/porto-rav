@@ -2,6 +2,11 @@ import { useState, useRef } from 'react';
 import { Mail, Github, Linkedin, Send, Loader2, Instagram } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { RevealOnScroll } from './RevealOnScroll';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
 
 export default function Contact() {
   const formRef = useRef();
@@ -67,72 +72,75 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-card-bg p-8 rounded-3xl border border-white/10">
-            <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-400 mb-2">Name</label>
-                <input 
-                  type="text" 
-                  name="user_name" 
-                  required
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors"
-                  placeholder="Your Name"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-gray-400 mb-2">Email</label>
-                <input 
-                  type="email" 
-                  name="user_email" 
-                  required
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors"
-                  placeholder="your.email@example.com"
-                />
-              </div>
+          <Card className="bg-card-bg border-white/10">
+            <CardContent className="p-8">
+              <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
+                <div className="space-y-2">
+                  <Label htmlFor="user_name">Name</Label>
+                  <Input 
+                    id="user_name"
+                    type="text" 
+                    name="user_name" 
+                    required
+                    placeholder="Your Name"
+                  />
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="user_email">Email</Label>
+                  <Input 
+                    id="user_email"
+                    type="email" 
+                    name="user_email" 
+                    required
+                    placeholder="your.email@example.com"
+                  />
+                </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-400 mb-2">Message</label>
-                <textarea 
-                  name="message" 
-                  rows="4" 
-                  required
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors resize-none"
-                  placeholder="Open for Project"
-                ></textarea>
-              </div>
+                <div className="space-y-2">
+                  <Label htmlFor="message">Message</Label>
+                  <Textarea 
+                    id="message"
+                    name="message" 
+                    rows="4" 
+                    required
+                    placeholder="Open for Project"
+                  />
+                </div>
 
-              <button 
-                type="submit" 
-                disabled={loading}
-                className="w-full bg-white text-black font-bold py-4 rounded-xl hover:bg-gray-200 transition-all hover:scale-[1.02] flex items-center justify-center gap-2 disabled:opacity-70 disabled:hover:scale-100"
-              >
-                {loading ? (
-                  <>
-                    <Loader2 size={20} className="animate-spin" />
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    Send Message
-                    <Send size={20} />
-                  </>
+                <Button 
+                  type="submit" 
+                  disabled={loading}
+                  className="w-full font-bold py-4 h-12 rounded-xl"
+                  size="lg"
+                >
+                  {loading ? (
+                    <>
+                      <Loader2 size={20} className="animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <Send size={20} />
+                    </>
+                  )}
+                </Button>
+
+                {status === 'success' && (
+                  <div className="p-4 rounded-xl bg-green-500/10 border border-green-500/20 text-green-400 text-center text-sm font-medium animate-in fade-in duration-300">
+                    Message sent successfully! I'll get back to you soon.
+                  </div>
                 )}
-              </button>
-
-              {status === 'success' && (
-                <div className="p-4 rounded-xl bg-green-500/10 border border-green-500/20 text-green-400 text-center text-sm font-medium animate-fade-in">
-                  Message sent successfully! I'll get back to you soon.
-                </div>
-              )}
-              
-              {status === 'error' && (
-                <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-center text-sm font-medium animate-fade-in">
-                  Something went wrong. Please try again later.
-                </div>
-              )}
-            </form>
-          </div>
+                
+                {status === 'error' && (
+                  <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-center text-sm font-medium animate-in fade-in duration-300">
+                    Something went wrong. Please try again later.
+                  </div>
+                )}
+              </form>
+            </CardContent>
+          </Card>
 
         </div>
 

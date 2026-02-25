@@ -1,5 +1,7 @@
 import { ArrowRight, Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import { RevealOnScroll } from './RevealOnScroll';
+import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
 
 export default function Hero() {
   return (
@@ -20,9 +22,9 @@ export default function Hero() {
           <RevealOnScroll delay={0.2}>
           <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 text-lg md:text-xl text-gray-400">
             <span className="font-medium text-white">Front-end Engineer</span>
-            <span className="hidden md:block w-1 h-1 rounded-full bg-white/30" />
+            <Separator orientation="vertical" className="hidden md:block h-4" />
             <span className="font-medium text-white">UI/UX Designer</span>
-            <span className="hidden md:block w-1 h-1 rounded-full bg-white/30" />
+            <Separator orientation="vertical" className="hidden md:block h-4" />
             <span className="font-medium text-white">QA Engineer</span>
           </div>
           </RevealOnScroll>
@@ -35,13 +37,15 @@ export default function Hero() {
 
           <RevealOnScroll delay={0.6}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <a href="#projects" className="w-full sm:w-auto group flex items-center justify-center gap-2 bg-white text-black px-8 py-3 md:py-4 rounded-full font-medium hover:bg-gray-200 transition-all hover:scale-105">
-              View My Work
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a href="#contact" className="w-full sm:w-auto flex items-center justify-center gap-2 border border-white/20 text-white px-8 py-3 md:py-4 rounded-full font-medium hover:bg-white/10 transition-all">
-              Contact Me
-            </a>
+            <Button asChild size="lg" className="w-full sm:w-auto group">
+              <a href="#projects">
+                View My Work
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Button>
+            <Button variant="outline" asChild size="lg" className="w-full sm:w-auto">
+              <a href="#contact">Contact Me</a>
+            </Button>
           </div>
           </RevealOnScroll>
 
@@ -58,4 +62,3 @@ export default function Hero() {
     </section>
   )
 }
-
